@@ -1,6 +1,7 @@
 # Commit lint basic configuration
 
 Extending [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
+
 Quick types ref:
 ```
 [
@@ -30,7 +31,9 @@ Using `.huskyrc` file
 `npm i`
 
 ## Option 2
-* Configuring husky on `package.json`
+Configuring husky on `package.json`
+
+* Add following config
 ```
 {
   "husky": {
