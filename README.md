@@ -51,3 +51,18 @@ Configuring husky on `package.json`
 
 * Create project husky hooks
 `npm i`
+
+## Option 3
+Run on gitlab pipeline linting the last commit
+```
+  before_script:
+    - npm i -g @commitlint/cli @commitlint/config-conventional
+    - echo $(git log -1 --pretty=%B) | commitlint
+```
+
+Or linting all the commits to merge
+```
+  before_script:
+    - npm i -g @commitlint/cli @commitlint/config-conventional
+    - commitlint --from=$CI_BUILD_BEFORE_SHA
+```
