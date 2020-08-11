@@ -22,7 +22,7 @@ Quick types ref:
 ]
 ```
 
-## Option 1(actual configuration)
+## Option 1(current project configuration)
 Using `.huskyrc` file
 * Install commitlint libraries globally
 `npm i -g @commitlint/cli @commitlint/config-conventional`
@@ -66,3 +66,12 @@ Or linting all the commits to merge
     - npm i -g @commitlint/cli @commitlint/config-conventional
     - commitlint --from=$CI_BUILD_BEFORE_SHA
 ```
+
+## Option 4
+Add [GitLab push rules](https://docs.gitlab.com/ee/push_rules/push_rules.html)
+
+```
+(^(Notes added by \'git notes add\'))|(^(feat|fix|docs|breaking|config|no-release|style|refactor|test|build|ci|perf|chore)(\(.+\))?\:\s(.{3,}))
+```
+
+Regex using workaround for semantic release -> [issue](https://github.com/semantic-release/semantic-release/issues/1446)
