@@ -25,20 +25,26 @@ Quick types ref:
 ## Option 1(current project configuration)
 Using `.huskyrc` file
 * Install commitlint libraries globally
-`npm i -g @commitlint/cli @commitlint/config-conventional`
+```
+npm i -g @commitlint/cli @commitlint/config-conventional
+```
 
 * Create project husky hooks
-`npm i`
+```
+npm i
+```
 
 ## Option 2
 Install hook locally by `curl` taken the idea from [hazcod](https://github.com/hazcod/semantic-commit-hook)
 
 * Install commitlint libraries globally
-`npm i -g @commitlint/cli @commitlint/config-conventional`
+```
+npm i -g @commitlint/cli @commitlint/config-conventional
+```
 
 * Get hook from repo
 ```
-curl --fail -o .git/hooks/commit-msg https://raw.githubusercontent.com/mpielvitori/commitlint-usage/master/commit-msg && chmod 500 .git/hooks/commit-msg\
+curl --fail -o .git/hooks/commit-msg https://raw.githubusercontent.com/mpielvitori/commitlint-usage/master/commit-msg && chmod 500 .git/hooks/commit-msg
 ```
 
 ## Option 3
@@ -61,7 +67,9 @@ Configuring husky on `package.json`
 ```
 
 * Create project husky hooks
-`npm i`
+```
+npm i
+```
 
 ## Option 4
 Run on gitlab pipeline linting the last commit
