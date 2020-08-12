@@ -1,4 +1,4 @@
-# Commit lint basic configuration
+# Several ways to use commitlint
 
 Extending [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
 
@@ -31,6 +31,17 @@ Using `.huskyrc` file
 `npm i`
 
 ## Option 2
+Install hook locally by `curl` taken the idea from [hazcod](https://github.com/hazcod/semantic-commit-hook)
+
+* Install commitlint libraries globally
+`npm i -g @commitlint/cli @commitlint/config-conventional`
+
+* Get hook from repo
+```
+curl --fail -o .git/hooks/commit-msg https://raw.githubusercontent.com/mpielvitori/commitlint-usage/master/commit-msg && chmod 500 .git/hooks/commit-msg\
+```
+
+## Option 3
 Configuring husky on `package.json`
 
 * Add following config
@@ -52,7 +63,7 @@ Configuring husky on `package.json`
 * Create project husky hooks
 `npm i`
 
-## Option 3
+## Option 4
 Run on gitlab pipeline linting the last commit
 ```
   before_script:
@@ -67,7 +78,7 @@ Or linting all the commits to merge
     - commitlint --from=$CI_BUILD_BEFORE_SHA
 ```
 
-## Option 4
+## Option 5
 Add [GitLab push rules](https://docs.gitlab.com/ee/push_rules/push_rules.html)
 
 ```
