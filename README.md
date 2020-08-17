@@ -1,6 +1,6 @@
 # Several ways to use commitlint
 
-Extending [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
+Commit lint helps your team adhering to a commit convention. By supporting npm-installed configurations it makes sharing of commit conventions easy.
 
 Quick types ref:
 ```
@@ -94,3 +94,8 @@ Add [GitLab push rules](https://docs.gitlab.com/ee/push_rules/push_rules.html)
 ```
 
 Regex using workaround for semantic release -> [issue](https://github.com/semantic-release/semantic-release/issues/1446)
+
+
+## References
+* [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
+* [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
